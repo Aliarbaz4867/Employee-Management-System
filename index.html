@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="Stylesheet" href="style.css">     
+</head>
+<body>    
+    <div class="containerFrom ">
+    <h2>Employee Management System</h2>
+    <form id="employeeForm">    
+    <div style="width: 50%;float: left;">
+        <div class="row">
+            <div class="lblBox">
+                <label for="txtfirstName" class="required">First Name</label>
+            </div>
+            <div class="inputBox">
+                <input class="txt" type="text" id="txtfirstName" name="txtfirstName" placeholder="First Name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="lblBox">
+                <label for="emailID" class="required">Email ID</label>
+            </div>
+            <div class="inputBox">
+                <input class="txt" type="text" id="emailID" name="emailID" placeholder="Email ID">
+            </div>
+        </div>
+        <div class="row">
+            <div class="lblBox">
+                <label for="dob" class="required">DOB</label>
+            </div>
+            <div class="inputBox">
+                <input class="txt" type="date"  id="dob" name="dob" onchange="formatDate()">
+            </div>
+        </div>
+        <div class="row">
+            <div class="lblBox">
+                <label for="department" class="required">Department</label>
+            </div>
+            <div class="inputBox">             
+                <select class="ddl" id="ddlDepartment">
+                    <option value="Select">Select</option>
+                    <option value="IT">IT</option>
+                    <option value="Software">Software</option>
+                    <option value="HR">HR</option>
+                  </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="lblBox">
+                <label for="role" class="required">Role</label>
+            </div>
+            <div class="inputBox">              
+                <select class="ddl" id="ddlRole">
+                    <option value="Select">Select</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Team Member">Team Member</option>
+                  </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="lblBox">
+                <label for="address">Address</label>
+            </div>
+            <div class="inputBox">
+                <input class="txt" type="text" id="address" name="address" placeholder="Address">
+            </div>
+        </div>
+    </div>
+    <div style="width: 50%;float:right;">
+        <div class="row">
+            <div class="lblBox">
+                <label for="lastName" class="required">Last Name</label>
+            </div>
+            <div class="inputBox">
+                <input class="txt" type="text" id="lastName" name="lastName" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="lblBox">
+                <label for="mobileNo" class="required">Mobile No</label>
+            </div>
+            <div class="inputBox">
+                <input class="txt" type="text" id="mobileNo" name="mobileNo" placeholder="Mobile No">
+            </div>
+        </div>
+        <div class="row">
+            <div class="lblBox">
+                <label for="gender" class="required">Gender</label>
+            </div>
+            <div class="inputBox">               
+                <select class="ddl" id="ddlGender">
+                    <option value="Select">Select</option>                    
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="lblBox">
+                <label for="designation" class="required">Designation</label>
+            </div>
+            <div class="inputBox">
+                <select class="ddl" id="ddlDesignation">
+                    <option value="Select">Select</option>
+                    <option value="Software Developer">Software Developer</option>
+                    <option value="Application Developer">Application Developer</option>
+                    <option value="React Developer">React Developer</option>
+                  </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="lblBox">
+                <label for="chkActive">Active</label>
+            </div>
+            <div class="inputBox">
+                <input type="checkbox" id="chkActive" value="Yes">                  
+                
+            </div>
+        </div>        
+    </div>
+    <div style="width: 100%; text-align: end;">
+        <div class="btn">            
+            <input id="clearBtn" type="button" class="btn1" onclick="clearForm()" value=" Clear "/>
+            <input id="saveBtn" type="button" class="btn1"  onclick="saveEmployee()" value=" Save "/>    
+       </div>
+    </div>   
+    </form>
+    <input id="txtSelectedIndex" value="-1" type="text" style="width:50px">
+    </div> 
+    <div>
+        <table id="employeeTbl" style="width: 100%;">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email ID</th>
+                <th>Mobile No</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Designation</th>
+                <th>Role</th>                
+                <th>Active</th>
+                <th>Address</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+          </table>
+    </div>   
+    <script src="script.js"></script>
+</body>
+</html>
